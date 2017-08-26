@@ -1,0 +1,172 @@
+/*------------------------------------------------
+*
+*	Table of contents: 
+*	1. Screen resolution 768px+
+*	2. Screen resolution 1600px+
+*	3. Screen resolution 1920px+
+*	4. Screen resolution less than 768px
+*
+-------------------------------------------------*/
+
+/*-------------------------------------------------
+	1. Screen resolution 768px+
+-------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+	.sidebarWrapper {
+		position: fixed;
+	}
+	.toggle-btn {
+		position: absolute;
+		visibility: hidden;
+	}
+	.toggle-placeholder {
+		display: none;
+	}
+	.service-box, 
+	.skill-outer, 
+	.blog-post div {
+		float: left;
+		width: 50%;
+	}
+	.service-box:nth-child(odd), 
+	.skill-outer:nth-child(even) {
+		padding-left: 25px;
+	}
+	.service-box:nth-child(even), 
+	.skill-outer:nth-child(odd) {
+		padding-right: 25px;
+	}
+	.portfolio-filter ul li {
+		margin-right: 20px;
+	}
+	.portfolio-filter ul li:last-child, 
+	.footer-background ul li:last-child {
+		margin: 0;
+	}
+	.blog-post div:last-child {
+		padding: 30px 0 0 50px;
+	}
+	.contact-form {
+		padding: 0 25px 0 0;
+	}
+	.contact-info {
+		padding: 0 0 0 25px;
+	}
+	.footer-background ul li {
+		margin-right: 20px;
+	}
+}
+
+/*-------------------------------------------------
+	2. Screen resolution 1600px+
+-------------------------------------------------*/
+@media only screen and (min-width: 1600px) {
+	.aboutWrapper, 
+	.servicesWrapper, 
+	.portfolioWrapper, 
+	.resumeWrapper, 
+	.blogWrapper, 
+	.testimonialWrapper, 
+	.contactWrapper, 
+	.footer-background {
+		width: 70%;
+		margin-left: 30%;
+	}
+}
+
+/*-------------------------------------------------
+	3. Screen resolution 1920px+
+-------------------------------------------------*/
+@media only screen and (min-width: 1920px) {
+	.aboutWrapper, 
+	.servicesWrapper, 
+	.portfolioWrapper, 
+	.resumeWrapper, 
+	.blogWrapper, 
+	.testimonialWrapper, 
+	.contactWrapper, 
+	.footer-background {
+		width: 65%;
+		margin-left: 35%;
+	}
+}
+
+/*-------------------------------------------------
+	4. Screen resolution less than 768px
+-------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+	.container {
+		padding: 0 30px;
+	}
+	.menu {
+		position: relative;
+	}
+	.nav {
+		position: absolute;
+		top: 60px;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 997;
+		background: rgb(20, 20, 20);
+		width: 100%;
+		-webkit-transform: translateY(-10px);
+		-moz-transform: translateY(-10px);
+		-ms-transform: translateY(-10px);
+		transform: translateY(-10px);
+		-webkit-transition: ease-out 0.3s;
+		-moz-transition: ease-out 0.3s;
+		-o-transition: ease-out 0.3s;
+		transition: ease-out 0.3s;
+		-webkit-box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.3);
+		-moz-box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.3);
+		box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.3);
+	}
+	.show-nav {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+	}
+	.stickyNav {
+		position: fixed;
+		left: 30px;
+		right: 30px;
+		width: auto;
+	}
+	.about-background, 
+	.skill-outer:last-child, 
+	.services-background {
+		margin: 0;
+	}
+	.skill-outer {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.service-box {
+		width: 100%;
+	}
+	.service-box:last-child {
+		margin: 0;
+	}
+	.portfolio-filter ul {
+		margin: -10px 0;
+	}
+	.portfolio-filter ul li {
+		margin: 10px 20px 10px 0;
+	}
+	.blog-post div:last-child {
+		padding: 30px 0 0;
+	}
+	.contact-form {
+		margin-bottom: 50px;
+	}
+	.footer-background ul {
+		margin: 20px 0 -10px;
+	}
+	.footer-background ul li {
+		padding: 10px;
+	}
+}
