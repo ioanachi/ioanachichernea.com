@@ -220,7 +220,7 @@ li {
 	background: transparent;
 }
 
-.toggle-close .lines::before, 
+.toggle-close .lines::before,
 .toggle-close .lines::after {
 	top: 0;
 	-webkit-transform-origin: 50% 50%;
@@ -255,7 +255,7 @@ li {
 	transition: linear 0.1s;
 }
 
-.sidebar .nav li.active a, 
+.sidebar .nav li.active a,
 .sidebar .nav li a:hover {
 	color: #fff;
 }
@@ -623,7 +623,7 @@ button.mfp-close:hover {
 	transition: linear 0.1s;
 }
 
-.blog-post a:hover, 
+.blog-post a:hover,
 .blog-post a:focus {
 	border-color: rgb(20, 20, 20);
 }
@@ -701,7 +701,7 @@ button.mfp-close:hover {
 	margin: 0 7px;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
 	background: rgb(20, 20, 20);
 }
@@ -713,13 +713,13 @@ button.mfp-close:hover {
 	padding: 100px 0;
 }
 
-.contactWrapper, 
-.contact-form, 
+.contactWrapper,
+.contact-form,
 .contact-info {
 	padding: 0;
 }
 
-.input-style input, 
+.input-style input,
 .text-style textarea {
 	width: 100%;
 	padding: 15px;
@@ -743,17 +743,17 @@ textarea {
 
 :-moz-placeholder {
 	letter-spacing: 0.5px;
-	color: rgb(60, 60, 60);  
+	color: rgb(60, 60, 60);
 }
 
 ::-moz-placeholder {
 	letter-spacing: 0.5px;
-	color: rgb(60, 60, 60);  
+	color: rgb(60, 60, 60);
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
 	letter-spacing: 0.5px;
-	color: rgb(60, 60, 60); 
+	color: rgb(60, 60, 60);
 }
 
 .submit-style {
@@ -786,7 +786,7 @@ textarea {
 	outline: none;
 }
 
-#success, 
+#success,
 #error {
 	display: none;
 	margin-top: 50px;
@@ -849,7 +849,7 @@ textarea {
 	transition: linear 0.1s;
 }
 
-.footer-background ul li a:hover, 
+.footer-background ul li a:hover,
 .footer-background ul li a:focus {
 	background: rgb(50, 50, 50);
 }

@@ -12,7 +12,7 @@ $(function() {
   /*===============================================
     Scroll Spy
   ===============================================*/
-  $('body').scrollspy({ 
+  $('body').scrollspy({
     target: '.sidebar'
   });
 
@@ -21,10 +21,10 @@ $(function() {
   ===============================================*/
   var htmlBody = $("html,body");
 
-  $(".sidebar ul li a").on("click", function(e) {
-      htmlBody.animate({scrollTop: $(this.hash).offset().top}, 800, "easeInOutQuart");  
-    e.preventDefault();
-  });
+  // $(".sidebar ul li a").on("click", function(e) {
+  //     htmlBody.animate({scrollTop: $(this.hash).offset().top}, 800, "easeInOutQuart");
+  //   e.preventDefault();
+  // });
 
   /*===============================================
     Toggle Menu
@@ -80,7 +80,7 @@ $(function() {
         menu.removeClass("stickyNav");
       }
     });
-    
+
   });
 
   // Active Placeholder when screen resolution is less than 768px
@@ -101,7 +101,7 @@ $(function() {
   /*===============================================
     Magnific Popup
   ===============================================*/
-  $('.lightbox').magnificPopup({ 
+  $('.lightbox').magnificPopup({
     type:'inline',
     fixedContentPos: false,
     removalDelay: 100,
@@ -168,7 +168,7 @@ $(function() {
   // Map Initial Location
   var initLatitude = -37.812154; // <- Latitude here
   var initLongitude = 144.954619; // <- Longitude here
-  
+
   var map = new GMaps({
     el: '#map-canvas',
     lat: initLatitude,
