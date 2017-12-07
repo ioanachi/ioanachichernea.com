@@ -12,24 +12,26 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-
-        <ul class=" menu nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link active" href="#!/">Lista coduri de boala</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!/medicochir">Lista coduri urgente medico chirurgicale</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!/boliinfcont">Lista coduri urgente boli infecto-contagioase</a>
-          </li>
-
-        </ul>
+        <div class="phone" ng-controller="MenuController as mnctrl">
+          <span ng-click="mnctrl.menuIsActiveFunc()" class="{{mnctrl.gli}}"></span>
+          <ul class=" menu nav nav-pills" ng-class="{ 'active': mnctrl.menuIsActive }">
+            <li class="nav-item" ng-click="go('/')">
+              Lista coduri de boala
+            </li>
+            <li class="nav-item" ng-click="go('/medicochir')">
+              Lista coduri urgente medico chirurgicale
+            </li>
+            <li class="nav-item" ng-click="go('/boliinfcont')">
+              Lista coduri urgente boli infecto-contagioase
+            </li>
+          </ul>
+        </div>
 
         <ng-view class="wiew"> </ng-view>
       </div>
     </div>
   </div>
+
 
   <script src="./dist/commons.js"></script>
   <script src="./dist/bundle.js"></script>
