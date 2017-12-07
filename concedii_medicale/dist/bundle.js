@@ -488,7 +488,7 @@ __webpack_require__(20);
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title></title>\r\n\r\n</head>\r\n\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n\r\n        <ul class=\" menu nav nav-pills\">\r\n          <li class=\"nav-item\">\r\n            <a class=\"nav-link active\" href=\"#!/\">Lista coduri de boala</a>\r\n          </li>\r\n          <li class=\"nav-item\">\r\n            <a class=\"nav-link\" href=\"#!/medicochir\">Lista coduri urgente medico chirurgicale</a>\r\n          </li>\r\n          <li class=\"nav-item\">\r\n            <a class=\"nav-link\" href=\"#!/boliinfcont\">Lista coduri urgente boli infecto-contagioase</a>\r\n          </li>\r\n\r\n        </ul>\r\n\r\n        <ng-view class=\"wiew\"> </ng-view>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html ng-app=\"myApp\">\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n  <title></title>\r\n\r\n</head>\r\n\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <div class=\"phone\" ng-controller=\"MenuController as mnctrl\">\r\n          <span ng-click=\"mnctrl.menuIsActiveFunc()\" class=\"{{mnctrl.gli}}\"></span>\r\n          <ul class=\" menu nav nav-pills\" ng-class=\"{ 'active': mnctrl.menuIsActive }\">\r\n            <li class=\"nav-item\" ng-click=\"go('/')\">\r\n              Lista coduri de boala\r\n            </li>\r\n            <li class=\"nav-item\" ng-click=\"go('/medicochir')\">\r\n              Lista coduri urgente medico chirurgicale\r\n            </li>\r\n            <li class=\"nav-item\" ng-click=\"go('/boliinfcont')\">\r\n              Lista coduri urgente boli infecto-contagioase\r\n            </li>\r\n          </ul>\r\n        </div>\r\n\r\n        <ng-view class=\"wiew\"> </ng-view>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <script src=\"./dist/commons.js\"></script>\r\n  <script src=\"./dist/bundle.js\"></script>\r\n</body>\r\n\r\n</html>\r\n";
 
 /***/ }),
 /* 7 */
@@ -694,7 +694,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  align-items: center;\n  text-align: center; }\n  body .denumire {\n    margin-top: 20px;\n    padding-top: 20px; }\n    body .denumire h4 {\n      text-align: center; }\n  body .input {\n    margin: 33px;\n    padding-left: 20px; }\n  body table {\n    width: 40%;\n    margin-left: auto;\n    margin-right: auto;\n    border: 1px solid #cccccc;\n    padding: 10px; }\n    body table th {\n      padding: 20px;\n      margin: 20px; }\n    body table tr {\n      border: 1px solid #cccccc;\n      padding: 20px;\n      margin: 20px; }\n      body table tr td {\n        border: 1px solid #cccccc;\n        padding: 6px;\n        text-align: left; }\n      body table tr .codes {\n        text-align: center; }\n", ""]);
+exports.push([module.i, "body {\n  align-items: center;\n  text-align: center; }\n  body .denumire {\n    margin-top: 20px;\n    padding-top: 20px; }\n    body .denumire h4 {\n      text-align: center; }\n  body .input {\n    margin: 33px;\n    padding-left: 20px; }\n  body table {\n    width: 40%;\n    margin-left: auto;\n    margin-right: auto;\n    border: 1px solid #cccccc;\n    padding: 10px; }\n    body table th {\n      padding: 20px;\n      margin: 20px; }\n    body table tr {\n      border: 1px solid #cccccc;\n      padding: 20px;\n      margin: 20px; }\n      body table tr td {\n        border: 1px solid #cccccc;\n        padding: 6px;\n        text-align: left; }\n      body table tr .codes {\n        text-align: center; }\n\n.phone span.glyphicon {\n  display: none; }\n\n@media only screen and (max-width: 412px) {\n  .phone ul.menu {\n    display: none; }\n    .phone ul.menu.active {\n      display: block; }\n  .phone ul li {\n    padding: 10px;\n    float: none;\n    text-align: center; }\n  .phone span.glyphicon {\n    display: inline-block;\n    margin: 10px;\n    padding: 10px;\n    border: 1px solid #c3c3c3;\n    background-color: #ebebeb; } }\n", ""]);
 
 // exports
 
@@ -36158,6 +36158,8 @@ __webpack_require__(24);
 
 __webpack_require__(26);
 
+__webpack_require__(28);
+
 /***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -39913,6 +39915,28 @@ var codes = [{
   description: "undefined "
 }];
 exports.codes = codes;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _main = __webpack_require__(0);
+
+_main.app.controller("MenuController", ['$scope', '$location', function ($scope, $location) {
+  var tThis = this;
+  tThis.gli = "glyphicon glyphicon-align-justify";
+  tThis.menuIsActive = false;
+  tThis.menuIsActiveFunc = function () {
+    tThis.menuIsActive = !tThis.menuIsActive;
+  };
+  $scope.go = function (path) {
+    tThis.menuIsActive = !tThis.menuIsActive;
+    $location.path(path);
+  };
+}]);
 
 /***/ })
 ],[4]);
