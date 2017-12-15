@@ -47,6 +47,24 @@ body {
 }
 
 .phone {
+  ul {
+    text-align: center;
+    align-items: center;
+
+    li {
+      padding: 10px;
+      margin: 10px;
+      float: none;
+      display: inline-block;
+      font-size: 17px;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(73, 101, 186);
+        border-bottom: 1px solid rgb(73, 101, 186);
+      }
+    }
+  }
 
   span {
     &.glyphicon {
@@ -55,17 +73,19 @@ body {
   }
   @media only screen and (max-width: 412px) {
     ul {
-      &.menu{
-        display:none;
-        &.active{
-          display:block;
+      &.menu {
+        display: none;
+
+        &.active {
+          display: block;
+
         }
       }
+
       li {
         padding: 10px;
         float: none;
         text-align: center;
-
       }
     }
 
@@ -78,6 +98,5 @@ body {
         background-color: rgb(235, 235, 235);
       }
     }
-
   }
 }
