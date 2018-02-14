@@ -1,0 +1,102 @@
+body {
+  align-items: center;
+  text-align: center;
+
+  .denumire {
+    margin-top: 20px;
+    padding-top: 20px;
+
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .input {
+    margin: 33px;
+    padding-left: 20px;
+  }
+
+  table {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #cccccc;
+    padding: 10px;
+
+    th {
+      padding: 20px;
+      margin: 20px;
+    }
+
+    tr {
+      border: 1px solid #cccccc;
+      padding: 20px;
+      margin: 20px;
+
+      td {
+        border: 1px solid #cccccc;
+        padding: 6px;
+        text-align: left;
+      }
+
+      .codes {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.phone {
+  ul {
+    text-align: center;
+    align-items: center;
+
+    li {
+      padding: 10px;
+      margin: 10px;
+      float: none;
+      display: inline-block;
+      font-size: 17px;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(73, 101, 186);
+        border-bottom: 1px solid rgb(73, 101, 186);
+      }
+    }
+  }
+
+  span {
+    &.glyphicon {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 412px) {
+    ul {
+      &.menu {
+        display: none;
+
+        &.active {
+          display: block;
+
+        }
+      }
+
+      li {
+        padding: 10px;
+        float: none;
+        text-align: center;
+      }
+    }
+
+    span {
+      &.glyphicon {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #c3c3c3;
+        background-color: rgb(235, 235, 235);
+      }
+    }
+  }
+}

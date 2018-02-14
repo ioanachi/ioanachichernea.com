@@ -1,0 +1,28 @@
+<div class="denumire" ng-controller="CodeUrgMC as urgCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="title">
+          <h4>Lista coduri urgente medico-chirurgicale</h4>
+          <h4> I Urgente medico-chirurgicale</h4>
+        </div>
+        <div class="input">
+          <label for="input">Cauta dupa cod sau descriere</label></br>
+          <input type="text" name="" value="" ng-model="urgCtrl.searchMe">
+        </div>
+        <div class="tabel">
+          <table>
+            <tr>
+              <th>Cod</th>
+              <th>Descriere boala</th>
+            </tr>
+            <tr ng-repeat="item in urgCtrl.angCodes | filter : urgCtrl.searchMe">
+              <td class="codes">{{item.code}}</td>
+              <td>{{item.description}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
