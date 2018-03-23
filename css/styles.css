@@ -726,6 +726,7 @@ button.mfp-close:hover {
   border-bottom: 3px solid rgb(210, 210, 210);
   padding-bottom: 5px;
   font-size: 38px;
+	font-weight: normal;
 }
 
 .contactWrapper h2 span {
