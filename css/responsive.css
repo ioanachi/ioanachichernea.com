@@ -34,7 +34,7 @@
 	}
 	.service-box:nth-child(even), 
 	.skill-outer:nth-child(odd) {
-		padding-right: 25px;
+		padding-left: 25px;
 	}
 	.portfolio-filter ul li {
 		margin-right: 20px;
